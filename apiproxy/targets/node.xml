@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="node">
+	<DefaultFaultRule>
+		<Step>
+			<Name>Raise.InternalError</Name>
+		</Step>
+	</DefaultFaultRule>
+	<ScriptTarget>
+        <ResourceURL>node://app.js</ResourceURL>
+    </ScriptTarget>
+</TargetEndpoint>

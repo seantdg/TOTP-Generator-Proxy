@@ -1,0 +1,9 @@
+<RaiseFault name="Raise.InternalError">
+ <FaultResponse>
+   <Set>
+     <StatusCode>500</StatusCode>
+     <ReasonPhrase>Internal Server Error</ReasonPhrase>
+	<Payload contentType="application/json" variablePrefix="@" variableSuffix="$">{"success":false}</Payload>
+   </Set>
+ </FaultResponse>
+</RaiseFault>

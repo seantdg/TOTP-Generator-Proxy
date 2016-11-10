@@ -1,0 +1,8 @@
+<KeyValueMapOperations mapIdentifier="mfaConfig" async="false" continueOnError="false" enabled="true" name="KVM.ReadTOTPInfo">
+  <Scope>environment</Scope>
+  <Get assignTo="custom.mfa.config">
+    <Key>
+      <Parameter>mfaConfig</Parameter>
+    </Key>
+  </Get>
+</KeyValueMapOperations>

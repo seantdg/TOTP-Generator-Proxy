@@ -1,0 +1,10 @@
+<PopulateCache async="false" continueOnError="false" enabled="true" name="Populate.MFAConfig">
+    <DisplayName>Populate.MFAConfig</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <KeyFragment>mfaConfig</KeyFragment>
+    </CacheKey>
+    <CacheResource>mfaConfig</CacheResource>
+    <Scope>Exclusive</Scope>
+    <Source>custom.mfa.config</Source>
+</PopulateCache>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+	<PreFlow>
+		<Request>
+			<!-- decode username and password from Authorization header -->
+			<Step>
+				<Name>BasicAuth.Decode</Name>
+			</Step>
+			<!-- lookup the totp key from the cache -->
+			<Step>
+				<Name>Lookup.MFAConfig</Name>
+			</Step>
+			<!-- if cache miss, get the value from KVM and cache it-->	
+			<Step>
+				<Name>KVM.ReadTOTPInfo</Name>
+				<Condition>lookupcache.Lookup.MFAConfig.cachehit != true</Condition>
+			</Step>
+			<Step>
+				<Name>Populate.MFAConfig</Name>
+				<Condition>lookupcache.Lookup.MFAConfig.cachehit != true</Condition>
+			</Step>
+		</Request>
+	</PreFlow>
+	<PostFlow/>
+	<Flows/>
+    <RouteRule name="node">
+        <TargetEndpoint>node</TargetEndpoint>
+    </RouteRule>    
+    <HTTPProxyConnection>
+        <BasePath>/mgmt/v1</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+</ProxyEndpoint>
