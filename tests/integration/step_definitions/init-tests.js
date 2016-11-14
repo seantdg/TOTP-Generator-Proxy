@@ -14,13 +14,13 @@ module.exports = function() {
     // cleanup before every scenario
     this.Before(function(scenario, callback) {
         this.apickli = new apickli.Apickli('https', url);
-		this.apickli.storeValueInScenarioScope('robotUsername', 'devadmin+ee-nonprod@apigee.com');
-		this.apickli.storeValueInScenarioScope('robotPassword', 'obOufsD1JdGE4EVwkLvh');
-		this.apickli.storeValueInScenarioScope('humanUsername', 'sdavis+sso@apigee.com');
-		this.apickli.storeValueInScenarioScope('humanPassword', 'Password123');
-		this.apickli.storeValueInScenarioScope('incorrectUsername', 'something@apigee.com');
+		this.apickli.storeValueInScenarioScope('robotUsername', 'devadmin+(orgname)@apigee.com');
+		this.apickli.storeValueInScenarioScope('robotPassword', '(robotpassword)');
+		this.apickli.storeValueInScenarioScope('humanUsername', '(realperson)@example.com');
+		this.apickli.storeValueInScenarioScope('humanPassword', '(realpassword)');
+		this.apickli.storeValueInScenarioScope('incorrectUsername', 'something@example.com');
 		this.apickli.storeValueInScenarioScope('incorrectPassword', 'something');
-		this.apickli.storeValueInScenarioScope('orgName', 'ee-nonprod');
+		this.apickli.storeValueInScenarioScope('orgName', '(orgname)');
         callback();
     });
 };
