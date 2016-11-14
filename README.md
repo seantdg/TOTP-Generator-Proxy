@@ -15,7 +15,7 @@ to the Apigee Management API.
 
 ## High Level Design
 
-![HLD](images/design.png "HLD")
+![HLD](images/design.png)
 
 - This Apigee Proxy only needs to be deployed in a single environment
 
