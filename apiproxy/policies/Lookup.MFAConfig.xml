@@ -4,9 +4,7 @@
     <CacheKey>
         <KeyFragment>mfaConfig</KeyFragment>
     </CacheKey>
-    <!-- Omit this element if you're using the included shared cache. -->
     <CacheResource>mfaConfig</CacheResource>
     <Scope>Exclusive</Scope>
     <AssignTo>custom.mfa.config</AssignTo>
 </LookupCache>
-
