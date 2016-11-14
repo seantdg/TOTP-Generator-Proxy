@@ -35,10 +35,23 @@
 	<!-- For apigee.options, refer to "Advanced Configuration Options" under https://github.com/apigee/apigee-deploy-maven-plugin#pom-xml-sample -->
 	<profiles>
 		<profile>		
-			<id>test</id>
+			<id>deploy</id>
 			<properties>
-				<apigee.profile>test</apigee.profile>
-				<apigee.env>test</apigee.env>
+				<apigee.profile>deploy</apigee.profile>
+				<apigee.env>${env}</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> 
+				<apigee.org>${organization}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.options>update</apigee.options>
+			</properties>
+		</profile>
+		<profile>		
+			<id>deploy-mfa</id>
+			<properties>
+				<apigee.profile>deploy-mfa</apigee.profile>
+				<apigee.env>${env}</apigee.env>
 				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
 				<apigee.apiversion>v1</apigee.apiversion> 
 				<apigee.org>${organization}</apigee.org>
@@ -47,20 +60,6 @@
 				<apigee.options>update</apigee.options>
 				<apigee.mfatoken>${mfatoken}</apigee.mfatoken>
 				<apigee.authtype>oauth</apigee.authtype>
-			</properties>
-		</profile>
-		<profile>		
-			<id>prod</id>
-			<properties>
-				<apigee.profile>prod</apigee.profile>
-				<apigee.env>prod</apigee.env>
-				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
-				<apigee.apiversion>v1</apigee.apiversion> 
-				<apigee.org>${organization}</apigee.org>
-				<apigee.username>${username}</apigee.username>
-				<apigee.password>${password}</apigee.password>
-				<apigee.options>update</apigee.options>
-				<apigee.mfatoken>${mfatoken}</apigee.mfatoken>
 			</properties>
 		</profile>
     </profiles>
