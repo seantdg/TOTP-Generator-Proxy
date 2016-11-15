@@ -1,5 +1,5 @@
 # TOTP Generator Proxy
-##Enabling Management API calls for Machine Users in an org with Two-Factor Authentication enabled.
+## Enabling Management API calls for Machine Users in an org with Two-Factor Authentication enabled.
 
 When two-factor authentication is enabled for an organization, then all users
 will be required to provide a one-time password when logging into [Apigee Edge
